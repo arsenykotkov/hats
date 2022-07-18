@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 import Home from './Home';
@@ -6,21 +5,6 @@ import News from './News';
 import About from './About';
 import Model from './Model';
 import Contacts from './Contacts';
-
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from 'reactstrap';
 
 function App() {
   return (
@@ -36,35 +20,16 @@ function App() {
   );
 }
 
-function Layout(args) {
+function Layout() {
   return (
-      <div style={{
-        height: '46px',
-        width: '100%',
-      }}>
-
-      <Navbar>
-        <Nav>
-          <NavLink>
-              <Link to="/">Home</Link>
-          </NavLink>
-          <NavLink>
-            <Link to="/news">News</Link>
-          </NavLink>
-          <NavLink>
-            <Link to="/about">About</Link>
-          </NavLink>
-          <NavLink>
-            <Link to="/model">Model</Link>
-          </NavLink>
-          <NavLink>
-            <Link to="/contacts">Contacts</Link>
-          </NavLink>
-        </Nav>
-      </Navbar>
-
-      <Outlet />
-    </div>
+      <>
+        <Link to="/">Home</Link>
+        <Link to="/news">News</Link>
+        <Link to="/about">About</Link>
+        <Link to="/model">Model</Link>
+        <Link to="/contacts">Contacts</Link>
+        <Outlet />
+      </>
   );
 }
 
