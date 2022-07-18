@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Hat({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/hats/models/hat.glb')
+  const { nodes, materials } = useGLTF('models/hat.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh geometry={nodes.Crown.geometry} material={materials['Material.001']} material-color={props.colors.crownColor} visible={props.visibility.crownVisibility} />
@@ -18,4 +18,4 @@ export default function Hat({ ...props }) {
   )
 }
 
-useGLTF.preload('/hats/models/hat.glb')
+useGLTF.preload('models/hat.glb')
